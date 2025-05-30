@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "awesome",
+    "password": "chenzaapp",
+    "database": "cv_faster",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "awesome",
+    "password": "chenzaapp",
+    "database": "cv_faster",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "awesome",
+    "password": "chenzaapp",
+    "database": "cv_faster",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
