@@ -2,21 +2,23 @@
 import createError from 'http-errors';
 import express,{type Request, type Response} from 'express';
 import path from 'path';
+import logger from './middlewares/logging';
 const cookieParser = require('cookie-parser');
-const logger = require("morgan");
 const db = require('./models');
 import indexRouter from './routes/index';
 
 
 const app = express();
 
-db.sequelize.asyncIterat
+app.use((req:Request,res:Response,next:any)=>{
+    logger.info(`${req.method} ${req.originalUrl}`);
+    next();
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
