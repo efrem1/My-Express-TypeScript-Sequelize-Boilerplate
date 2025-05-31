@@ -4,8 +4,9 @@ import express,{type Request, type Response} from 'express';
 import path from 'path';
 import logger from './middlewares/logging';
 const cookieParser = require('cookie-parser');
-const db = require('./models');
 import indexRouter from './routes/index';
+
+import './config/modalsynchronization';
 
 
 const app = express();
