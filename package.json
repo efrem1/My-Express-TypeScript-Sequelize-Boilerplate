@@ -5,7 +5,8 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
-    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/bin/www.ts"
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/bin/www.ts",
+    "test": "mocha"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -29,6 +30,7 @@
     "@types/express": "^5.0.2",
     "@types/node": "^22.15.24",
     "eslint": "^9.27.0",
+    "mocha": "^11.5.0",
     "nodemon": "^3.1.10",
     "prettier": "^3.5.3",
     "sequelize-cli": "^6.6.3",
